@@ -2,7 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import borsh from './borsh.png';
+import minus from './minus.svg';
+import plus from './plus.svg';
+import { useState } from 'react';
 function App() {
+  let [count,setCount] = useState(1);
+  let [disable,setDisable] = useState(false);
+  function incClick(){
+    setCount(count+1)
+  }
+  function decClick(){
+    if (count==1){
+      return
+    }
+    setCount(count-1)
+  }
   return (
     <div className="App" >
       <div className='container'>
@@ -18,7 +32,7 @@ function App() {
               Российский борщ
             </h4>
           </div>    
-          <div>  
+          <div className='paragraph'>  
             <h4>В стандартной конфигурации:</h4>  
             <p>картофель, капуста, помидоры, морковь, бурак,<br/> зеленый лук,укроп и петрушка</p>  
           </div>  
@@ -46,7 +60,6 @@ function App() {
                   </p>
                 </li>
               </ul>
-
             </div>
             <div className='form-column'>
               <h4> Капуста</h4>
@@ -91,7 +104,7 @@ function App() {
                   </label>
                 </li>
                 <li>
-                  <input type="checkbox" id="point-11"></input>
+                  <input name='filling'  type="checkbox" id="point-11"></input>
                   <label htmlFor="point-11">                  
                     Кинза
                   </label>
@@ -99,11 +112,55 @@ function App() {
               </ul>
             </div>
           </div>
+          <div className='slicing'>
+            <h4 className='slicing-title'>Нарезка</h4>
+            <p>Калибровка по картофелю, остальное все соразмерно</p>
+            <div className='slicing-list'>
+              <ul>
+                <li>
+                  <input name='slicing'  type="radio" id="point-12"></input>
+                  <label htmlFor="point-12">
+                    1 см
+                  </label>              
+                </li>
+                <li>
+                  <input name='slicing'  type="radio" id="point-13"></input>
+                  <label htmlFor="point-13">
+                    1.5 см
+                  </label>    
+                </li>
+                <li>
+                  <input name='slicing'  type="radio" id="point-14"></input>
+                  <label htmlFor="point-14">
+                    2 см
+                  </label>    
+                </li>
+                <li>
+                  <input name='slicing'  type="radio" id="point-15"></input>
+                  <label htmlFor="point-15">
+                    3-4 см
+                  </label>    
+                </li>
+              </ul>
+            </div>
+          </div>
           <div>
-            <h4>Нарезка</h4>
+            <div>Хлеб</div>
+            <div>В придачу</div>
+          </div>
+          <div className='order'>
+            <div>
+              {count} порция
+            </div>
+            <button onClick={decClick} >
+              <img src={minus} width={40} height={40} ></img>
+            </button>
+            <button onClick={incClick}>
+              <img src={plus} width={40} height={40}></img>
+            </button>
+            <button>Заказать</button>
           </div>
       </div>
-
     </div>
   );
 }

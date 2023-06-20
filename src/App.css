@@ -2,24 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-
+.paragraph{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .container{
   height:100%;
   width:100%;
-  max-width:640px;
-  padding-left:10px;
-  padding-right:10px;
-  margin-right:0;
-  margin-left:0;
+  max-width:720px;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position:center;  
+  background-image: url('borsh.svg');
   border: 1rem solid;
   border-color: red;
 }
 
 .slider-block-title{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .slider-title{
   padding-right:10px;
@@ -27,17 +33,37 @@
 
 .form{
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.form-column h4{}
 .form-column{
   display: flex;
   flex-direction: column;
-}
-.form-list{
-  list-style: none;
+
 }
 .form-list li{
-  text-align:left;
+  list-style: none;
+}
+
+.form-list label{
+  word-wrap: break-word;
+}
+
+
+.slicing {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.slicing-title{
+  align-items: left;
+}
+.slicing-list ul{
+  display: flex;
+  flex-direction: row;
+  
+}
+.slicing-list li{
+  list-style: none;
+}
+.order{
+  border:1px solid black;
 }
