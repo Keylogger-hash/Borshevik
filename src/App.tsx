@@ -18,28 +18,33 @@ function App() {
     setCount(count-1)
   }
   return (
-    <div className="App" >
+    <div className="App" >  
+      <h1>Борщ</h1>
       <div className='container'>
-        <h1>Борщ</h1>
-        <div className='slider-block-title'>
-            <h4 className='slider-title'>
-              Украинский борщ
-            </h4>
-            <h4 className='slider-title'>
-              Кубанский борщ
-            </h4>
-            <h4 className='slider-title'>
-              Российский борщ
-            </h4>
+        <div className='slider-block-title-column'>
+            <div className='slider-block-title-row'>
+              <h4 className='slider-title'>
+                Украинский борщ
+              </h4>
+              <h4 className='slider-title'>
+                Кубанский борщ
+              </h4>
+              <h4 className='slider-title'>
+                Российский борщ
+              </h4>
+            </div>  
+            <div className='center'>
+              <input type="range"></input>
+            </div>
           </div>    
           <div className='paragraph'>  
-            <h4>В стандартной конфигурации:</h4>  
+            <p>В стандартной конфигурации:</p>  
             <p>картофель, капуста, помидоры, морковь, бурак,<br/> зеленый лук,укроп и петрушка</p>  
           </div>  
           <div className='form'>
             <div className='form-column'>
-              <h4> Бульон</h4>
-              <ul className='form-list'>
+              <h4 className='center'> Бульон</h4>
+              <ul className='form-list' >
                 <li>
                   <input name='narezka' type="radio" id="point-1"></input>
                   <label htmlFor="point-1">Говяжий</label>
@@ -62,8 +67,8 @@ function App() {
               </ul>
             </div>
             <div className='form-column'>
-              <h4> Капуста</h4>
-              <ul className='form-list'>
+              <h4 className='center'> Капуста</h4>
+              <ul className='form-list '>
                 <li>
                   <input name='kapusta' type="radio" id="point-4"></input>
                   <label htmlFor="point-4">Свежая</label>
@@ -79,7 +84,7 @@ function App() {
               </ul>
             </div>
             <div className='form-column'>
-              <h4> Наполнение</h4>
+              <h4 className='center'> Наполнение</h4>
               <ul className='form-list'>
                 <li>
                   <input name='filling' type="checkbox" id="point-7"></input>
@@ -144,9 +149,65 @@ function App() {
               </ul>
             </div>
           </div>
-          <div>
-            <div>Хлеб</div>
-            <div>В придачу</div>
+          <div className='additional'>
+            <div>
+              Хлеб
+              <ul>
+                <li>
+                  <input name='bread' type="radio"></input>
+                  <label htmlFor="point-16">
+                    Белый пшеничный
+                  </label>
+                </li>
+                <li>
+                  <input name='bread' type="radio"></input>
+                  <label htmlFor="point-16">
+                    Серый ржаной
+                  </label>
+                </li>
+                <li>
+                  <input name='bread' type="radio"></input>
+                  <label htmlFor="point-16">
+                    Бородинский
+                  </label>
+                </li>
+                <li>
+                  <input name='bread' type="radio"></input>
+                  <label htmlFor="point-16">
+                    Пампушка чесночная
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div>
+              В придачу
+              <ul>
+                <li>
+                  <input name='in-add' type="checkbox"></input>
+                  <label htmlFor="point-16">
+                    Сметана
+                  </label>
+                </li>
+                <li>
+                  <input name='in-add' type="checkbox"></input>
+                  <label htmlFor="point-16">
+                    Чеснок зубчики
+                  </label>
+                </li>
+                <li>
+                  <input name='in-add' type="checkbox"></input>
+                  <label htmlFor="point-16">
+                    Аджика
+                  </label>
+                </li>
+                <li>
+                  <input name='in-add' type="checkbox"></input>
+                  <label htmlFor="point-16">
+                    Водка
+                  </label>
+                </li>              
+              </ul>
+            </div>
           </div>
           <div className='order'>
             <div>

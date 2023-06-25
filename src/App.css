@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
+}
+.App li {
+    list-style: none;
 }
 .paragraph{
   display: flex;
@@ -11,21 +15,47 @@
   justify-content: center;
   text-align: center;
 }
+input[type='range'] {
+    -webkit-appearance: none !important;
+    background:red;
+    height:7px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:blue;
+    height:10px;
+    width:10px;
+}
 .container{
-  height:100%;
+  height:10%;
   width:100%;
-  max-width:720px;
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position:center;  
-  background-image: url('borsh.svg');
+  max-width:640px;
   border: 1rem solid;
   border-color: red;
+  background-image: url('borsh.svg');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
 }
-
+.center{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .slider-block-title{
   display: flex;
   justify-content: space-between;
+}
+.slider-block-title-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.slider-block-title-column{
+  display: flex;
+  flex-direction: column;
 }
 .slider-title{
   padding-right:10px;
@@ -62,8 +92,11 @@
   
 }
 .slicing-list li{
-  list-style: none;
 }
 .order{
   border:1px solid black;
+}
+.additional{
+  display: flex;
+  display: row;
 }
